@@ -20,16 +20,28 @@ public class TestGuerrier {
         while (guerrier1.estVivant() && guerrier2.estVivant()) {
             guerrier1.attaquer(guerrier2);
             System.out.println("Points de vie du guerrier 2 ");
+<<<<<<< HEAD
             System.out.println(guerrier2.getPointsDeVie());
             if (!guerrier2.estVivant()) {
+=======
+            System.out.println(guerrier2.getPointsDeVie()); // Affichage des points de vies du guerrier 2
+            if (!guerrier2.estVivant()) { // Si le guerrier 2 est vivant on continue
+>>>>>>> 9e0630c (Version test 2)
                 break;
             }
             guerrier2.attaquer(guerrier1);
             System.out.println("Points de vie du guerrier 1 ");
+<<<<<<< HEAD
             System.out.println(guerrier1.getPointsDeVie());
             if (!guerrier1.estVivant()) {
                 break;
             }            System.out.println();
+=======
+            System.out.println(guerrier1.getPointsDeVie());// Affichage des points de vies du guerrier 1
+            if (!guerrier1.estVivant()) { // Si le guerrier 1 est vivant on continue
+                break;
+            }   System.out.println();
+>>>>>>> 9e0630c (Version test 2)
         }
 
         // Affichage du résultat du combat
