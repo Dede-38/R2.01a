@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author fbm
  */
-public class TestJeuEtape2 {
+public class TestJeuEtape3 {
 
     public static void main(String[] args) {
         
@@ -26,21 +26,29 @@ public class TestJeuEtape2 {
 
         // A COMPLETER : Ajouter les guerriers au chateau
         chateauBleu.ajoutGuerrierNovice(new Guerrier());
-        chateauBleu.ajoutGuerrierNovice(new Guerrier());
-        chateauBleu.ajoutGuerrierNovice(new Guerrier());
+        chateauBleu.ajoutGuerrierNovice(new Elfe());
+        chateauBleu.ajoutGuerrierNovice(new Nain());
 
         chateaurouge.ajoutGuerrierNovice(new Guerrier());
-        chateaurouge.ajoutGuerrierNovice(new Guerrier());
-        chateaurouge.ajoutGuerrierNovice(new Guerrier());
+        chateaurouge.ajoutGuerrierNovice(new Nain());
+        chateaurouge.ajoutGuerrierNovice(new ChefElfe());
 
         // A COMPLETER : Afficher les guerriers contenu dans le chateau (dans l'ordre d'entrainement)
 
         ChateauUtilitaire.afficherChâteau(chateauBleu);
         ChateauUtilitaire.afficherChâteau(chateaurouge);
-
         // A COMPLETER : Réaliser un premier entrainement puis afficher les guerriers prets aux combats
         Guerrier[] guerrierEntrainesRouge= chateaurouge.entrainer();
         Guerrier[] guerrierEntrainesBleu = chateauBleu.entrainer();
+        chateauBleu.ajoutGuerrierNovice(new Guerrier());
+        chateaurouge.ajoutGuerrierNovice(new Guerrier());
+        for (Guerrier guerrier : guerrierEntrainesBleu) {
+            System.out.println(guerrier);
+        }
+
+        for (Guerrier guerrier : guerrierEntrainesRouge) {
+            System.out.println(guerrier);
+        }
         ChateauUtilitaire.afficherChâteau(chateauBleu);
         ChateauUtilitaire.afficherChâteau(chateaurouge);
 
